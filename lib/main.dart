@@ -1,9 +1,15 @@
-import 'package:exam4/home.dart';
-import 'package:exam4/login.dart';
-import 'package:exam4/test.dart';
+
+import 'package:exam4/pages/bottomnav.dart';
+import 'package:exam4/pages/home.dart';
+import 'package:exam4/pages/login.dart';
+import 'package:exam4/pages/onboard.dart';
+import 'package:exam4/pages/signup.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -35,7 +41,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: FlutterApp(),
+      home: OnBoard(),
     );
   }
 }

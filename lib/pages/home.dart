@@ -40,6 +40,11 @@ class _HomeState extends State<Home> {
                 style: AppWidget.HeadlineTextFeildStyle()),
             Text("Top 1 Viet Nam",
                 style: AppWidget.LightTextFeildStyle()),
+            Row(children: [
+              Container(
+
+              ),
+            ],),
           ],
         ),
       ),
